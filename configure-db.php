@@ -102,7 +102,7 @@ catch (PDOException $e) {
 
 $contents = file_get_contents($confpath);
 if(getenv('AUTH_METHOD') == "ldap") {
-    $config['PLUGINS'] = 'auth_ldap, note';
+    $config['PLUGINS'] = 'auth_internal, auth_ldap, note';
     if(getenv('PLUGINS')!=""){
         $config['PLUGINS'] .= ', ' . env("PLUGINS", "");
     }
