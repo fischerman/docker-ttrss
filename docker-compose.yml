@@ -1,0 +1,32 @@
+version: "3"
+services:
+
+  ttrss:
+    build: .
+    ports:
+      - "80:80"
+    networks:
+      - ttrss
+    environment:
+      DB_TYPE: pgsql
+      DB_HOST: db
+      DB_PORT: 5432
+      SELF_URL_PATH: http://localhost:3280
+    restart: always
+
+  db:
+    image: postgres:10.1
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    networks:
+      - ttrss
+    environment:
+      POSTGRES_PASSWORD: ttrss
+      POSTGRES_USER: ttrss
+      POSTGRES_DB: ttrss
+
+networks:
+  ttrss:
+
+volumes:
+  db-data:
