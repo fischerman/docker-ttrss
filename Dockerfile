@@ -25,6 +25,8 @@ RUN git clone https://github.com/hydrian/TTRSS-Auth-LDAP.git /TTRSS-Auth-LDAP &&
     ls -la /var/www/plugins
 RUN cp config.php-dist config.php
 
+RUN (cd /var/www/themes && git clone https://github.com/naeramarth7/clean-greader && cp clean-greader/wrapper.css clean-greader.css)
+
 RUN mkdir /run/php
 
 # expose only nginx HTTP port
