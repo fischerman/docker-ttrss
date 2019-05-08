@@ -13,7 +13,7 @@ Tiny Tiny RSS is an open source web-based news feed (RSS/Atom) reader and aggreg
 designed to allow you to read news from any location,
 while feeling as close to a real desktop application as possible.
 
-![](http://tt-rss.org/images/1.9/1.jpg)
+![](https://tt-rss.org/images/ttrss/18.12/1812-shot1.png)
 
 ## Quickstart
 
@@ -26,11 +26,11 @@ Just start up a new database container:
 $ docker run -d --name ttrssdb nornagon/postgres
 ```
 
-And because this docker image is available as a [trusted build on the docker index](https://index.docker.io/u/clue/ttrss/),
+And because this docker image is available on [Docker Hub](https://cloud.docker.com/repository/docker/fischerman/docker-ttrss),
 using it is as simple as launching this Tiny Tiny RSS installation linked to your fresh database:
 
 ```bash
-$ docker run -d --link ttrssdb:db -p 80:80 clue/ttrss
+$ docker run -d --link ttrssdb:db -p 80:80 fischerman/docker-ttrss
 ```
 
 Running this command for the first time will download the image automatically.
@@ -46,7 +46,7 @@ The default login credentials are:
 * Username: admin
 * Password: password
 
-Obviously, you're recommended to change these as soon as possible.
+You're recommended to change these as soon as possible.
 
 ## Installation Walkthrough
 
@@ -197,7 +197,7 @@ This is particular useful for your initial database setup, as errors get reporte
 the console and further execution will halt.
 
 ```bash
-$ docker run -it --link tinydatabase:db -p 80:80 clue/ttrss
+$ docker run -it --link tinydatabase:db -p 80:80 fischerman/docker-ttrss
 ```
 
 ### Running ttrss daemonized
@@ -208,5 +208,5 @@ Remaining arguments can be passed just like before, the following is the recomme
 minimum:
 
 ```bash
-$ docker run -d --link tinydatabase:db -p 80:80 clue/ttrss
+$ docker run -d --link tinydatabase:db -p 80:80 fischerman/docker-ttrss
 ```
