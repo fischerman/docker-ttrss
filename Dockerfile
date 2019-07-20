@@ -22,8 +22,9 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y curl --n
 
 ADD af_newspapers /var/www/plugins/af_newspapers
 
-RUN git clone https://github.com/hydrian/TTRSS-Auth-LDAP.git /TTRSS-Auth-LDAP \
-    && cp -r /TTRSS-Auth-LDAP/plugins/auth_ldap plugins/ \
+RUN git clone https://github.com/hydrian/TTRSS-Auth-LDAP.git /root/TTRSS-Auth-LDAP \
+    && cp -r /root/TTRSS-Auth-LDAP/plugins/auth_ldap plugins/ \
+    && rm -rf /root/TTRSS-Auth-LDAP \
     && git clone https://github.com/HenryQW/mercury_fulltext.git /var/www/plugins/mercury_fulltext \
     && ls -la /var/www/plugins
 
