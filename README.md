@@ -5,6 +5,10 @@ Keep your feed history to yourself and access your RSS and atom feeds from every
 You can access it through an easy to use webinterface on your desktop, your mobile browser
 or using one of the available apps.
 
+## Versions
+
+Check https://hub.docker.com/r/fischerman/docker-ttrss/tags for different version. `latest` will be updated without further notice.
+
 ## About Tiny Tiny RSS
 
 > *From [the official readme](http://tt-rss.org/redmine/projects/tt-rss/wiki):*
