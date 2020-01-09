@@ -3,10 +3,7 @@ MAINTAINER Christian Lück <christian@lueck.tv>
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get install -y php7.0-mbstring \
   git nginx supervisor php7.0-fpm php7.0-cli php7.0-curl php7.0-gd php7.0-json php-gettext php7.0-intl \
-  php7.0-pgsql php7.0-ldap php7.0-mysql php7.0-mcrypt && apt-get clean && rm -rf /var/lib/apt/lists/*
-
-# enable the mcrypt module
-RUN phpenmod mcrypt
+  php7.0-pgsql php7.0-ldap php7.0-mysql && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # add ttrss as the only nginx site
 ADD ttrss.nginx.conf /etc/nginx/sites-available/ttrss
