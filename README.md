@@ -7,7 +7,7 @@ or using one of the available apps.
 
 ## Versions
 
-Check https://hub.docker.com/r/fischerman/docker-ttrss/tags for different version. `latest` will be updated without further notice.
+Check https://hub.docker.com/r/fischerman/docker-ttrss/tags for different versions. `latest` will be updated without further notice. TTRSS has no versioning scheme. New versions of this container image will be published using git commit hashes. If you seek a newer version, feel free to open a PR.
 
 ## About Tiny Tiny RSS
 
